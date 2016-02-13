@@ -9,12 +9,14 @@ To be continued...
 This document explains what steps are necessary to get the
 application up and running.
 
-# Installation
-get the code `git clone https://github.com/RaimundSchramm/plunch.git`
-start the server `rails s`
+#System dependencies
+none
 
-* Ruby version - 2.1.5
-* System dependencies - none
+# Installation
+* install Ruby 2.1.5
+* get the code `git clone https://github.com/RaimundSchramm/plunch.git`
+* start the server `rails s`
+
 * Configuration - none
 * Database creation - none
 * Database initialization - none
