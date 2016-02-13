@@ -1,4 +1,4 @@
-# Plunch - If you don't know what to chose for lunch
+## Plunch - If you don't know what to chose for lunch
 
 Tired of noodles every day?!
 Get a quick overview what you had for lunch in the last weeks.
@@ -12,15 +12,18 @@ application up and running.
 ##System dependencies
 none
 
-## Installation
+### Installation
 * install Ruby 2.1.5
-* get the code `git clone https://github.com/RaimundSchramm/plunch.git`
-* start the server `rails s`
+* get the code
+`git clone https://github.com/RaimundSchramm/plunch.git`
+* install gems
+`bundle`
+* start the server
+`rails s`
 
-### Initialize database
+#### Initialize database
 
-## Configuration
-## How to run the test suite
-##Services (job queues, cache servers, search engines, etc.) - none
-##Deployment instructions
-* ...
+### Configuration
+### How to run the test suite
+### Services (job queues, cache servers, search engines, etc.) - none
+### Deployment instructions
