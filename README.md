@@ -15,6 +15,8 @@ Things you may want to cover:
 
 * Ruby version
 
+`ruby 2.1.5`
+
 * System dependencies
 
 * Configuration
