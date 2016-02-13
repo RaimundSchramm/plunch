@@ -9,18 +9,17 @@ To be continued...
 This document explains what steps are necessary to get the
 application up and running.
 
-#System dependencies
+##System dependencies
 none
 
-# Installation
+## Installation
 * install Ruby 2.1.5
 * get the code `git clone https://github.com/RaimundSchramm/plunch.git`
 * start the server `rails s`
+### Initialize database
 
-* Configuration - none
-* Database creation - none
-* Database initialization - none
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.) - none
-* Deployment instructions
+## Configuration
+## How to run the test suite
+##Services (job queues, cache servers, search engines, etc.) - none
+##Deployment instructions
 * ...
