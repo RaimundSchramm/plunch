@@ -16,6 +16,7 @@ none
 * install Ruby 2.1.5
 * get the code `git clone https://github.com/RaimundSchramm/plunch.git`
 * start the server `rails s`
+
 ### Initialize database
 
 ## Configuration
