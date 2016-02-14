@@ -11,6 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160214144056) do
+
+  create_table "dishes", force: :cascade do |t|
+    t.string "name"
+  end
+
+  add_index "dishes", ["name"], name: "index_dishes_on_name"
 
 end
