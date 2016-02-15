@@ -23,7 +23,7 @@ class DishesController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def dish_params
-      params.require(:dish).permit(:name)
+      params.require(:dish).permit(:name, :eaten_on)
     end
 
 end
