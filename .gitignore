@@ -17,5 +17,5 @@
 /tmp
 
 #Ignore byebug files
-/*.byebug
+/*.byebug*
 
