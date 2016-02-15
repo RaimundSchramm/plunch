@@ -10,20 +10,26 @@ This document explains what steps are necessary to get the
 application up and running.
 
 ##System dependencies
-none
+- Ruby 2.1.5
+- git
+- some Javascript-Runtime-Environment, i.e. node.js
 
 ### Installation
-* install Ruby 2.1.5
-* get the code
+- get the code
 `git clone https://github.com/RaimundSchramm/plunch.git`
-* install gems
+- install gems
 `bundle`
-* start the server
-`rails s`
-
-#### Initialize database
+- Initialize database
+`rake db:setup`
+- start the server
+`rails s -e production -p [number of the port you need]`
 
 ### Configuration
+none yet
+
 ### How to run the test suite
+- conventionally by `rake`
+- using guard `guard` and then hit enter or wait for the first relevant file change
+
 ### Services (job queues, cache servers, search engines, etc.) - none
 ### Deployment instructions
