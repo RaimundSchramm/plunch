@@ -1,7 +1,7 @@
 <div class='center jumbotron'>
   <p id="notice"><%= notice %></p>
 
-  <h1>Dishes<h1/>
+  <h1>Dishes</h1>
 
   <table>
     <thead>
@@ -16,9 +16,9 @@
     <tbody>
       <% @dishes.each do |dish| %>
         <tr>
-          <td><%= dish.name %></td>
-          <td><%= days_passed(dish.eaten_on) %></td>
-          <td><%= eaten_on_formatted(dish.eaten_on) %></td>
+          <td class='name'><%= dish.name %></td>
+          <td class='days'><%= days_passed(dish.eaten_on) %></td>
+          <td class='eaten'><%= eaten_on_formatted(dish.eaten_on) %></td>
         </tr>
       <% end %>
     </tbody>
