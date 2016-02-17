@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'dishes#index'
+  root 'static_pages#home'
+
   resources :dishes, only: [:index, :new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
