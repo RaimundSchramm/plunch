@@ -1,28 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class='center jumbotron'>
+  <p id="notice"><%= notice %></p>
 
-<h1>Dishes<h1/>
+  <h1>Dishes<h1/>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Had it</th>
-      <th>Lastly eaten on</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @dishes.each do |dish| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= dish.name %></td>
-        <td><%= days_passed(dish.eaten_on) %></td>
-        <td><%= eaten_on_formatted(dish.eaten_on) %></td>
+        <th>Name</th>
+        <th>Had it</th>
+        <th>Lastly eaten on</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @dishes.each do |dish| %>
+        <tr>
+          <td><%= dish.name %></td>
+          <td><%= days_passed(dish.eaten_on) %></td>
+          <td><%= eaten_on_formatted(dish.eaten_on) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Dish', new_dish_path %>
+  <br>
+
+  <%= link_to 'New Dish', new_dish_path %>
+</div>
