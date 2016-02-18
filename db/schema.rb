@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160215120830) do
+ActiveRecord::Schema.define(version: 20160218150651) do
 
   create_table "dishes", force: :cascade do |t|
     t.string "name"
@@ -19,5 +19,9 @@ ActiveRecord::Schema.define(version: 20160215120830) do
   end
 
   add_index "dishes", ["name"], name: "index_dishes_on_name"
+
+  create_table "meals", force: :cascade do |t|
+    t.date "eaten_on"
+  end
 
 end
