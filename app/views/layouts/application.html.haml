@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %title Plunch
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header.navbar.navbar-fixed-top.navbar-inverse
+      .container
+        = image_tag 'logo', id: 'logo'
+        = link_to 'Plunch', root_path, id: 'home-link'
+        %nav
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to 'Dishes', dishes_path
+            %li= link_to 'Log in', '#'
+    .container
+      = yield
