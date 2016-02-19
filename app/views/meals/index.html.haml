@@ -1,0 +1,21 @@
+.center.jumbotron
+  %p#notice= notice
+
+  %h1 Meals
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Had it
+        %th Lastly eaten on
+        %th{:colspan=>'3'}
+    %tbody
+      - @meals.each do |meal|
+        %tr
+          %td.name= meal.dish.try(:name)
+          %td.days= days_passed(meal.eaten_on)
+          %td.eaten= eaten_on_formatted(meal.eaten_on)
+  %br/
+
+  = link_to 'New Meal', new_meal_path
