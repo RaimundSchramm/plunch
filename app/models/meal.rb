@@ -4,4 +4,6 @@ class Meal < ActiveRecord::Base
 
   validates :eaten_on, presence: true
 
+  default_scope { order(eaten_on: :desc) }
+
 end

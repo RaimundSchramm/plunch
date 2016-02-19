@@ -26,4 +26,13 @@ class MealTest < ActiveSupport::TestCase
     assert_not @meal.valid?
   end
 
+  # scopes
+  test 'is ordered by descending date by default' do
+    any_dish        = Dish.create(name: 'Currywurst', eaten_on: Date.today)
+    yesterdays_meal = Meal.create(eaten_on: Date.yesterday, dish: any_dish)
+    todays_meal     = Meal.create(eaten_on: Date.today, dish: any_dish)
+    meals           = Meal.all
+    assert meals.first.eaten_on > meals.last.eaten_on
+  end
+
 end
