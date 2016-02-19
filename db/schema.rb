@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218150651) do
+ActiveRecord::Schema.define(version: 20160218184202) do
 
   create_table "dishes", force: :cascade do |t|
     t.string "name"
@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 20160218150651) do
   add_index "dishes", ["name"], name: "index_dishes_on_name"
 
   create_table "meals", force: :cascade do |t|
-    t.date "eaten_on"
+    t.date    "eaten_on"
+    t.integer "dish_id"
   end
+
+  add_index "meals", ["dish_id"], name: "index_meals_on_dish_id"
 
 end
