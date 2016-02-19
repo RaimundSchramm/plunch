@@ -7,11 +7,6 @@ class DishTest < ActiveSupport::TestCase
     @valid_dish = Dish.new name: 'Currywurst', eaten_on: @current_date
   end
 
-  # class specific
-  test 'is a Dish' do
-    assert_kind_of Dish, @valid_dish
-  end
-
   # attributes
   test 'has a name' do
     assert_respond_to @valid_dish, :name
@@ -41,6 +36,11 @@ class DishTest < ActiveSupport::TestCase
     todays_dish     = Dish.create(name: 'lunch today', eaten_on: Date.today)
     dishes = Dish.eaten_lastly
     assert dishes.first.eaten_on > dishes.last.eaten_on
+  end
+
+  # associations
+  test 'can be eaten on many meals' do
+    assert_respond_to @valid_dish, :meals
   end
 
 end
