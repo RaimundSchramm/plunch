@@ -6,19 +6,14 @@ class MealTest < ActiveSupport::TestCase
     @meal = Meal.new(eaten_on: Date.today)
   end
 
-  # class specific
-  test 'is a Meal' do
-    assert_kind_of Meal, @meal
-  end
-
   # attributes
   test 'has a date' do
     assert_respond_to @meal, :eaten_on
   end
 
   # associations
-  test 'consists of one or more dishes' do
-    assert_respond_to @meal, :dishes
+  test 'is of a kind of dish' do
+    assert_respond_to @meal, :dish
   end
 
   # validations
