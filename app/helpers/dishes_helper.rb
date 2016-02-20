@@ -1,9 +1,8 @@
 module DishesHelper
 
-  def days_passed(date)
-    return 'today' if date == Date.today
-    return 'yesterday' if date == Date.yesterday
-    number_of_days_passed = (Date.today - date).to_i
+  def days_passed(number_of_days_passed)
+    return 'today'     if number_of_days_passed == 0
+    return 'yesterday' if number_of_days_passed == 1
     return "#{number_of_days_passed} days ago"
   end
 
