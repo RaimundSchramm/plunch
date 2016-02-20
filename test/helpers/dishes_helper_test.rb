@@ -7,19 +7,15 @@ class DishesHelperTest < ActionView::TestCase
   end
 
   test 'returns number of days since last consumption' do
-    any_past_date = 2.days.ago.to_date
-    expected      = "2 days ago"
-    assert_equal expected, days_passed(any_past_date)
+    assert_equal '2 days ago', days_passed(2)
   end
 
   test 'returns today for recent dish' do
-    expected      = "today"
-    assert_equal expected, days_passed(@today)
+    assert_equal 'today', days_passed(0)
   end
 
   test 'returns yesterday for yesterday dish' do
-    expected      = "yesterday"
-    assert_equal expected, days_passed(Date.yesterday)
+    assert_equal 'yesterday', days_passed(1)
   end
 
   test 'returns lastly eaten formatted' do

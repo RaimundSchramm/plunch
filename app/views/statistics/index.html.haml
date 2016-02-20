@@ -7,11 +7,12 @@
     %thead
       %tr
         %th Name
+        %th Had it
+        %th Lastly eaten on
         %th{:colspan=>'3'}
     %tbody
       - @dishes.each do |dish|
         %tr
           %td.name= dish.name
-  %br/
-
-  = link_to 'New Dish', new_dish_path
+          %td.days= days_passed(@statistics.days_since_last_meal(dish))
+          %td.eaten= eaten_on_formatted(dish.eaten_on)

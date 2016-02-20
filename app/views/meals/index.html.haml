@@ -14,7 +14,7 @@
       - @meals.each do |meal|
         %tr
           %td.name= meal.dish.try(:name)
-          %td.days= days_passed(meal.eaten_on)
+          %td.days= days_passed(Statistics.new.days_since_last_meal(meal.dish))
           %td.eaten= eaten_on_formatted(meal.eaten_on)
   %br/
 
