@@ -1,0 +1,10 @@
+%header.navbar.navbar-fixed-top.navbar-inverse
+  .container
+    = image_tag 'logo', id: 'logo'
+    = link_to 'Plunch', root_path, id: 'home-link'
+    %nav
+      %ul.nav.navbar-nav.navbar-right
+        %li.nav-link-color= link_to 'Statistics', statistics_path
+        %li.nav-link-color= link_to 'Meals', meals_path
+        %li.nav-link-color= link_to 'Dishes', dishes_path
+        %li.nav-link-color= link_to 'Log in', '#'
