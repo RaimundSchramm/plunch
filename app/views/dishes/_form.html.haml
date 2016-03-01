@@ -1,17 +1,10 @@
-= form_for(@dish) do |f|
+= simple_form_for @dish do |f|
   - if @dish.errors.any?
     #error_explanation
       %h2= "#{pluralize(@dish.errors.count, "error")} prohibited this dummydish from being saved:"
       %ul>
       - @dish.errors.full_messages.each do |message|
         %li= message
-  .field
-    = f.label :name
-    %br/
-    = f.text_field :name
-  .field
-    = f.label :eaten_on
-    %br/
-    = f.date_field :eaten_on
-  .actions
-    = f.submit
+  = f.input :name, placeholder: 'Enter your next delicious dish here.', autofocus: true
+  = f.input :eaten_on
+  = f.button :submit
