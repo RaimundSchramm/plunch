@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  = @meal_log.name
+  %b :
+  = @meal_log.from.to_formatted_s(:rfc822)
+  %b -
+  = @meal_log.till.to_formatted_s(:rfc822)
+
+= link_to 'Edit', edit_meal_log_path(@meal_log)
+\|
+= link_to 'Back', meal_logs_path
