@@ -16,6 +16,8 @@
 !/log/.keep
 /tmp
 
-#Ignore byebug files
+# Ignore byebug files
 /*.byebug*
 
+# Ignore public assets
+/public/assets
