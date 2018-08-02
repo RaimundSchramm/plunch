@@ -1,4 +1,4 @@
-## Plunch - If you don't know what to chose for lunch
+## Plunch - If you don't know what to chose for lunch [![Build Status](https://travis-ci.org/RaimundSchramm/plunch.svg?branch=master)](https://travis-ci.org/RaimundSchramm/plunch)
 
 Tired of noodles every day?!
 Get a quick overview what you had for lunch in the last weeks.
