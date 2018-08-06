@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eaten_on: <%= DateTime.new(2018,07,25,8) %>
+  meal: Coffee with Milk
+
+two:
+  eaten_on: <%= DateTime.new(2018,8,01,9) %>
+  meal: Decaf
+
+three:
+  eaten_on: <%= DateTime.new(2018,8,11,10) %>
+  meal: Chicken Curry
