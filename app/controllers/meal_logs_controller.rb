@@ -10,6 +10,7 @@ class MealLogsController < ApplicationController
   # GET /meal_logs/1
   # GET /meal_logs/1.json
   def show
+    @meal_log_entries = MealLogEntry.grouped_by_day
   end
 
   # GET /meal_logs/new

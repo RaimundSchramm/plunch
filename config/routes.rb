@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :meal_log_entries
   resources :meal_logs
   root 'static_pages#home'
 
