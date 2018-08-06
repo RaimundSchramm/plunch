@@ -1,0 +1,10 @@
+= simple_form_for(@meal_log_entry) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.datetime_select :eaten_on
+    = f.input :meal
+
+
+  .form-actions
+    = f.button :submit

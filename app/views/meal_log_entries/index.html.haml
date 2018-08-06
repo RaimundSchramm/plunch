@@ -1,0 +1,23 @@
+%h1 Listing Meal Log Entries
+
+%table
+  %thead
+    %tr
+      %th Eaten on
+      %th Meal
+      %th
+      %th
+      %th
+
+  %tbody
+    - @meal_log_entries.each do |meal_log_entry|
+      %tr
+        %td= meal_log_entry.eaten_on.to_formatted_s(:short)
+        %td= meal_log_entry.meal
+        %td= link_to 'Show', meal_log_entry
+        %td= link_to 'Edit', edit_meal_log_entry_path(meal_log_entry)
+        %td= link_to 'Destroy', meal_log_entry, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Meal log entry', new_meal_log_entry_path

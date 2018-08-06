@@ -1,0 +1,10 @@
+%p#notice= notice
+
+%p
+  = @meal_log_entry.eaten_on.to_formatted_s(:short)
+  %b :
+  = @meal_log_entry.meal
+
+= link_to 'Edit', edit_meal_log_entry_path(@meal_log_entry)
+\|
+= link_to 'Back', meal_log_entries_path

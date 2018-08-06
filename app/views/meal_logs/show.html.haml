@@ -10,3 +10,33 @@
 = link_to 'Edit', edit_meal_log_path(@meal_log)
 \|
 = link_to 'Back', meal_logs_path
+
+%hr
+  = link_to 'New Meal Log Entry', new_meal_log_entry_path
+
+%hr
+%h2 Listing Meal Log Entries
+
+- @meal_log_entries.each do |day, meal_log_entries|
+  %h3= day.strftime("%d.%m.%Y")
+  %table
+    %thead
+      %tr
+        %th Time
+        %th Meal
+        %th
+        %th
+        %th
+
+    %tbody
+      - for meal_log_entry in meal_log_entries.each
+        %tr
+          %td.eaten= meal_log_entry.eaten_on.strftime("%H:%M")
+          %td.name= meal_log_entry.meal
+          %td= link_to 'Show', meal_log_entry
+          %td= link_to 'Edit', edit_meal_log_entry_path(meal_log_entry)
+          %td= link_to 'Destroy', meal_log_entry, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Meal log entry', new_meal_log_entry_path
