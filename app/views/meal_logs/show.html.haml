@@ -18,7 +18,7 @@
 %h2 Listing Meal Log Entries
 
 - @meal_log_entries.each do |day, meal_log_entries|
-  %h3= day.strftime("%d.%m.%Y")
+  %h3= format_unique_day(day)
   %table
     %thead
       %tr
@@ -31,7 +31,7 @@
     %tbody
       - for meal_log_entry in meal_log_entries.each
         %tr
-          %td.eaten= meal_log_entry.eaten_on.strftime("%H:%M")
+          %td.eaten= format_eaten_on(meal_log_entry.eaten_on)
           %td.name= meal_log_entry.meal
           %td= link_to 'Show', meal_log_entry
           %td= link_to 'Edit', edit_meal_log_entry_path(meal_log_entry)
