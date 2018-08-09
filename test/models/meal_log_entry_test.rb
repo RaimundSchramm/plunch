@@ -1,6 +1,13 @@
 require 'test_helper'
 
 class MealLogEntryTest < ActiveSupport::TestCase
+
+  # associations
+  test "belongs to a MealLog" do
+    assert_respond_to MealLogEntry.new,  :meal_log
+  end
+
+  # scopes
   test "returns all entries ordered by day" do
     assert_respond_to MealLogEntry, :grouped_by_day
 

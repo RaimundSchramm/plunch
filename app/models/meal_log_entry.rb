@@ -1,5 +1,7 @@
 class MealLogEntry < ActiveRecord::Base
 
+  belongs_to :meal_log
+
   default_scope {order('eaten_on')}
 
   def self.grouped_by_day
