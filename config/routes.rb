@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :meal_log_entries
-  resources :meal_logs
   root 'static_pages#home'
+
+  resources :meal_logs do
+    resources :meal_log_entries
+  end
 
   resources :dishes, only: [:index, :new, :create]
   resources :meals, only: [:index, :new, :create]
