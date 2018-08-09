@@ -1,4 +1,6 @@
-%h1 Listing Meal Log Entries
+%h2= link_to "#{@meal_log.name} : #{@meal_log.from.to_formatted_s(:rfc822)} - #{@meal_log.till.to_formatted_s(:rfc822)}", @meal_log
+
+%h3 Listing Meal Log Entries
 
 %table
   %thead

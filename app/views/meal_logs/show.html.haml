@@ -15,7 +15,7 @@
   = link_to 'New Meal Log Entry', new_meal_log_meal_log_entry_path(@meal_log)
 
 %hr
-%h2 Listing Meal Log Entries
+%h2= link_to "Listing Meal Log Entries", meal_log_meal_log_entries_path(@meal_log)
 
 - @meal_log_entries.each do |day, meal_log_entries|
   %h3= format_unique_day(day)
