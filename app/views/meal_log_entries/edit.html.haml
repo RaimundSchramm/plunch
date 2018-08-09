@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @meal_log_entry
+= link_to 'Show', [@meal_log, @meal_log_entry]
 \|
-= link_to 'Back', meal_log_entries_path
+= link_to 'Back', meal_log_meal_log_entries_path(@meal_log)
