@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  meal_log: meal_logs(:one)
   eaten_on: <%= DateTime.new(2018,07,25,8) %>
   meal: Coffee with Milk
 
 two:
+  meal_log: meal_logs(:one)
   eaten_on: <%= DateTime.new(2018,8,01,9) %>
   meal: Decaf
 
 three:
+  meal_log: meal_logs(:one)
   eaten_on: <%= DateTime.new(2018,8,11,10) %>
   meal: Chicken Curry

@@ -12,10 +12,10 @@
 = link_to 'Back', meal_logs_path
 
 %hr
-  = link_to 'New Meal Log Entry', new_meal_log_entry_path
+  = link_to 'New Meal Log Entry', new_meal_log_meal_log_entry_path(@meal_log)
 
 %hr
-%h2 Listing Meal Log Entries
+%h2= link_to "Listing Meal Log Entries", meal_log_meal_log_entries_path(@meal_log)
 
 - @meal_log_entries.each do |day, meal_log_entries|
   %h3= format_unique_day(day)
@@ -33,10 +33,10 @@
         %tr
           %td.eaten= format_eaten_on(meal_log_entry.eaten_on)
           %td.name= meal_log_entry.meal
-          %td= link_to 'Show', meal_log_entry
-          %td= link_to 'Edit', edit_meal_log_entry_path(meal_log_entry)
-          %td= link_to 'Destroy', meal_log_entry, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          %td= link_to 'Show', [@meal_log, meal_log_entry]
+          %td= link_to 'Edit', edit_meal_log_meal_log_entry_path(@meal_log, meal_log_entry)
+          %td= link_to 'Destroy', [@meal_log, meal_log_entry], :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Meal log entry', new_meal_log_entry_path
+= link_to 'New Meal log entry', new_meal_log_meal_log_entry_path(@meal_log)

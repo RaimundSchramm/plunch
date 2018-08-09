@@ -5,6 +5,6 @@
   %b :
   = @meal_log_entry.meal
 
-= link_to 'Edit', edit_meal_log_entry_path(@meal_log_entry)
+= link_to 'Edit', edit_meal_log_meal_log_entry_path(@meal_log, @meal_log_entry)
 \|
-= link_to 'Back', meal_log_entries_path
+= link_to 'Back', meal_log_meal_log_entries_path(@meal_log)
